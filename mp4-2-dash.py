@@ -157,14 +157,6 @@ def run_cmd(cmd):
     f.close()
     proc.wait()
 
-
-def runcmd2(cmd):
-    w = open("run.log", "a")
-    p = subprocess.call(cmd, shell=True, stdout=w,
-                        stderr=subprocess.STDOUT, bufsize=0)
-    w.close()
-
-
 def main():
     """
     脚本处理主要流程：

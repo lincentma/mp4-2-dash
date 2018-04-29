@@ -175,10 +175,10 @@ def main():
     ffmpeg_files, ffmpeg_cmd = parse_ffmpeg(input_dir,input_file_name,video_scale_bitrates, video_keyint)
     mp4box_cmd = parse_mp4box(ffmpeg_files, segment_duration, profile_name, segment_name, mpd_name)
 
-    # for cmd in ffmpeg_cmd:
-    #     run_cmd(cmd)
-    
+    for cmd in ffmpeg_cmd:
+        run_cmd(cmd)
     run_cmd(mp4box_cmd)
+    
     print('================MP4-2-DASH end============================')
 
 
